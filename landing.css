@@ -1,4 +1,12 @@
 
+@font-face {
+    font-family: "Nothing";
+    src: url("fonts/nothing-font-5x7.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +16,7 @@
 html,
 body.landing-page {
     width: 100%;
+    height: 100%;
     min-height: 100%;
 }
 
@@ -19,22 +28,26 @@ body.landing-page {
     font-family: "Nothing", monospace;
 }
 
-.landing {
+/* Full-screen background and content alignment */
+body.landing-page > .landing {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    position: relative;
+
+    position: fixed;
+    inset: 0;
     width: 100%;
+    height: 100vh;
+    height: 100svh;
     min-height: 100vh;
     min-height: 100svh;
+
     overflow: hidden;
 
-    background-image: url("images/cover.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: url("images/cover.jpg") center center / cover no-repeat;
 }
 
+/* Text block on the right */
 .landing-content {
     position: relative;
     z-index: 1;
@@ -46,6 +59,7 @@ body.landing-page {
 
 .name-link {
     display: inline-block;
+    max-width: 100%;
     color: #fff;
     font-family: "Nothing", monospace;
     font-size: clamp(1.8rem, 3.6vw, 3.8rem);
@@ -66,6 +80,8 @@ body.landing-page {
 }
 
 .welcome-text {
+    display: block;
+    width: 100%;
     margin-top: 18px;
     color: #fff;
     font-family: "Nothing", monospace;
@@ -77,15 +93,15 @@ body.landing-page {
 
 /* Tablet and mobile */
 @media (max-width: 700px) {
-    .landing {
-        background-position: center;
+    body.landing-page > .landing {
+        background-position: center center;
     }
 
     .landing-content {
         width: 100%;
         padding: 20px;
-        margin-top: 100px;
         text-align: center;
+        transform: none;
     }
 
     .name-link {
@@ -109,16 +125,86 @@ body.landing-page {
         letter-spacing: 0.04em;
     }
 }
-@font-face {
-    font-family: "Nothing";
-    src: url("fonts/nothing-font-5x7.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 
 body.landing-page,
 body.landing-page .name-link,
 body.landing-page .welcome-text {
     font-family: "Nothing", monospace !important;
+}
+
+/* FINAL INTRO PAGE OVERRIDES */
+html,
+body.landing-page {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body.landing-page {
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: #000 !important;
+}
+
+/* Make the background cover the complete viewport */
+body.landing-page > main.landing {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+
+    background-image: url("./images/cover.jpg") !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+
+    overflow: hidden;
+}
+
+/* Keep intro text on the right */
+body.landing-page .landing-content {
+    position: relative;
+    z-index: 1;
+    width: 49%;
+    max-width: none;
+    margin: 0;
+    padding: 30px 4% 30px 0;
+    text-align: center;
+    transform: translateY(-1%);
+}
+
+body.landing-page .name-link {
+    display: inline-block;
+    max-width: 100%;
+}
+
+body.landing-page .welcome-text {
+    display: block;
+    width: 100%;
+    margin-top: 18px;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+    body.landing-page .landing-content {
+        width: 100%;
+        padding: 20px;
+        transform: none;
+    }
 }
