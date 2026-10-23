@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>GET IN TOUCH</h1>
+   <nav>
+    <a href="landing.html">Intro</a>
+    <a class="active" href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="information.html">Information</a>
+</nav>
+</header>
+
+<main class="contact-main">
+
+    <div class="contact-heading">
+        <p class="contact-tag">LET'S CONNECT</p>
+        <h2>Contact Me</h2>
+        <p>Have a question, an idea, or an opportunity? Fill out the form below.</p>
+    </div>
+
+    <form class="contact-form"
+          action="mailto:yourname@gmail.com"
+          method="post"
+          enctype="text/plain">
+
+        <div class="form-title">
+            <h3>Send a Message</h3>
+            <p>Fields marked * are required.</p>
+        </div>
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="First Name"
+                       placeholder="Enter first name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Last Name *</label>
+                <input type="text" id="last-name" name="Last Name"
+                       placeholder="Enter last name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="Phone Number"
+                       placeholder="+977 98XXXXXXXX" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="Email"
+                       placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="Address"
+                       placeholder="Enter your address">
+            </div>
+
+            <div class="form-group full-width">
+                <label>How would you prefer to be contacted? *</label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="Preferred Contact"
+                               value="Email" required>
+                        <span>Email</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio" name="Preferred Contact"
+                               value="Phone">
+                        <span>Phone</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio" name="Preferred Contact"
+                               value="Either">
+                        <span>Either</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="subject">What is your message about? *</label>
+                <select id="subject" name="Subject" required>
+                    <option value="" disabled selected>Select a subject</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Project Collaboration">Project Collaboration</option>
+                    <option value="Event Invitation">Event Invitation</option>
+                    <option value="Research">Research</option>
+                    <option value="Work Opportunity">Work Opportunity</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="message">Your Message *</label>
+                <textarea id="message" name="Message" rows="6"
+                          placeholder="Write your message here..."
+                          required></textarea>
+            </div>
+
+        </div>
+
+        <div class="form-buttons">
+            <button type="submit" class="send-button">SEND MESSAGE ↗</button>
+            <button type="reset" class="clear-button">CLEAR FORM</button>
+        </div>
+
+        <p class="form-note">
+            Your information will be used to respond to your inquiry.
+        </p>
+
+    </form>
+
+    <div class="contact-alternative">
+        <p>Prefer email?</p>
+        <a href="mailto:aabhashbhattarai5@gmail.com">aabhashbhattarai5@gmail.com</a>
+    </div>
+
+</main>
+
+
+<footer>
+    <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="information.html">Information</a>
+    </nav>
+
+    <div class="footer-socials">
+        <a
+            href="https://www.instagram.com/aabhash.bhattarai/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >Instagram</a>
+
+        <span class="footer-divider">|</span>
+
+        <a href="mailto:aabhashbhattarai5@gmail.com">Email Me</a>
+    </div>
+
+    <p class="copyright">
+        &copy; 2026 Aabhash Bhattarai. All rights reserved.
+    </p>
+</footer>
+
+
+</body>
+</html>
